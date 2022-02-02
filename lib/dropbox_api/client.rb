@@ -30,6 +30,14 @@ module DropboxApi
       @connection_builder.namespace_id
     end
 
+    def select_user=(value)
+      @connection_builder.select_user = value
+    end
+
+    def select_user
+      @connection_builder.select_user
+    end
+
     # @!visibility private
     def self.add_endpoint(name, endpoint)
       define_method(name) do |*args, &block|

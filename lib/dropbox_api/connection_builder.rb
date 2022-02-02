@@ -2,6 +2,7 @@
 module DropboxApi
   class ConnectionBuilder
     attr_accessor :namespace_id
+    attr_accessor :select_user
 
     def initialize(oauth_bearer = nil, access_token: nil, on_token_refreshed: nil)
       if access_token
@@ -48,6 +49,9 @@ module DropboxApi
         }
         middleware.apply(connection) do
           connection.authorization :Bearer, bearer
+          if @select_user
+            connection.headers['Dropbox-API-Select-User'] = @select_user
+          end
           yield connection
         end
       end
