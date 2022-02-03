@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-module DropboxApi::Endpoints::Team::Members
+module DropboxApi::Endpoints::Team
   class ListFolder < DropboxApi::Endpoints::Rpc
     Method      = :post
     Path        = '/2/team/members/list_v2'
