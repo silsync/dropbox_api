@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 module DropboxApi::Endpoints::Team
-  class ListFolder < DropboxApi::Endpoints::Rpc
+  class ListTeamMembers < DropboxApi::Endpoints::Rpc
     Method      = :post
     Path        = '/2/team/members/list_v2'
-    # ResultType  = DropboxApi::Results::ListFolderResult
-    # ErrorType   = DropboxApi::Errors::ListFolderError
+    # ResultType  = DropboxApi::Results::ListTeamMembersResult
+    # ErrorType   = DropboxApi::Errors::ListTeamMembersError
 
     include DropboxApi::OptionsValidator
 

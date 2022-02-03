@@ -42,6 +42,8 @@ module DropboxApi
       @access_token.token
     end
 
+    
+
     def build(url)
       Faraday.new(url) do |connection|
         connection.use DropboxApi::MiddleWare::PathRoot, {
