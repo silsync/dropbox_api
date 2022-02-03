@@ -3,8 +3,8 @@ module DropboxApi::Endpoints::Team
   class ListTeamMembers < DropboxApi::Endpoints::Rpc
     Method      = :post
     Path        = '/2/team/members/list_v2'
-    # ResultType  = DropboxApi::Results::ListTeamMembersResult
-    # ErrorType   = DropboxApi::Errors::ListTeamMembersError
+    ResultType  = DropboxApi::Results::ListTeamMembersResult
+    ErrorType   = DropboxApi::Errors::ListTeamMembersError
 
     include DropboxApi::OptionsValidator
 
