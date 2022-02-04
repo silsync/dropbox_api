@@ -26,8 +26,6 @@ module DropboxApi::Endpoints::Team
     #   this is "approximate", and more may be returned)
     add_endpoint :list_team_members do |path, options = {}|
       validate_options([
-        :include_removed,
-        :limit
       ], options)
       options[:include_removed] ||= false
       options[:limit] = options[:limit] if options[:limit]

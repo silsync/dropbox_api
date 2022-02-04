@@ -16,7 +16,6 @@ module DropboxApi::Endpoints::Team
     #   this is "approximate", and more may be returned)
     add_endpoint :team_folder_list do |path, options = {}|
       validate_options([
-        :limit
       ], options)
       options[:limit] = options[:limit] if options[:limit]
       
