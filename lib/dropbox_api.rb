@@ -122,6 +122,7 @@ require 'dropbox_api/errors/thumbnail_error'
 require 'dropbox_api/errors/create_file_request_error'
 require 'dropbox_api/errors/delete_error'
 require 'dropbox_api/errors/team_members_error'
+require 'dropbox_api/errors/team_folder_list_error'
 
 require 'dropbox_api/result_builder'
 require 'dropbox_api/results/base'
@@ -152,6 +153,7 @@ require 'dropbox_api/results/upload_session_start'
 require 'dropbox_api/results/delete_batch_result_entry'
 require 'dropbox_api/results/delete_batch_result'
 require 'dropbox_api/results/team_members_result'
+require 'dropbox_api/results/team_folder_list_result'
 
 require 'dropbox_api/client'
 require 'dropbox_api/connection_builder'
@@ -201,6 +203,7 @@ require 'dropbox_api/endpoints/files/delete_batch'
 require 'dropbox_api/endpoints/files/create_folder_batch_check'
 
 require 'dropbox_api/endpoints/team/members/list'
+require 'dropbox_api/endpoints/team/team/team_folder_list'
 
 require 'dropbox_api/endpoints/sharing/add_file_member'
 require 'dropbox_api/endpoints/sharing/list_file_members'
