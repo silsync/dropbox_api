@@ -203,7 +203,7 @@ require 'dropbox_api/endpoints/files/delete_batch'
 require 'dropbox_api/endpoints/files/create_folder_batch_check'
 
 require 'dropbox_api/endpoints/team/members/list'
-require 'dropbox_api/endpoints/team/team/team_folder_list'
+require 'dropbox_api/endpoints/team/team_folder_list'
 
 require 'dropbox_api/endpoints/sharing/add_file_member'
 require 'dropbox_api/endpoints/sharing/list_file_members'
