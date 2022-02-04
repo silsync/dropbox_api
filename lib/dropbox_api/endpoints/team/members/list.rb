@@ -24,8 +24,10 @@ module DropboxApi::Endpoints::Team
     #   results per request (Note:
     #   {https://www.dropbox.com/developers/documentation/http/teams#team-members-list Dropbox docs} indicate
     #   this is "approximate", and more may be returned)
-    add_endpoint :list_team_members do |path, options = {}|
+    add_endpoint :list_team_members do |options = {}|
       validate_options([
+        :include_removed,
+        :limit
       ], options)
       options[:include_removed] ||= false
       options[:limit] = options[:limit] if options[:limit]

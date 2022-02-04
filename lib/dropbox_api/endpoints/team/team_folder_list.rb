@@ -14,8 +14,9 @@ module DropboxApi::Endpoints::Team
     #   results per request (Note:
     #   {https://www.dropbox.com/developers/documentation/http/teams#team-team_folder-list Dropbox docs} indicate
     #   this is "approximate", and more may be returned)
-    add_endpoint :team_folder_list do |path, options = {}|
+    add_endpoint :team_folder_list do |options = {}|
       validate_options([
+        :limit
       ], options)
       options[:limit] = options[:limit] if options[:limit]
       
