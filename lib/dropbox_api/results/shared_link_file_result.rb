@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 module DropboxApi::Results
   class ListSharedLinksResult < DropboxApi::Results::Base
+    #  Shared links applicable to the path argument.
+    def links
+      @entries ||= @data['links'].map do |entry|
+        DropboxApi::Metadata::SharedLinkMetadata.new entry
+      end
+    end
+
     # Pass the cursor into `list_folder_continue` to see what's changed in the
     # folder since your previous query.
     def cursor
