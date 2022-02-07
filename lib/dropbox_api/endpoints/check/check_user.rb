@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module DropboxApi::Endpoints::Users
-  class GetAccount < DropboxApi::Endpoints::Rpc
+  class CheckUser < DropboxApi::Endpoints::Rpc
     Method      = :post
     Path        = '/2/check/user'
     ResultType  = DropboxApi::Results::CheckUserResult
