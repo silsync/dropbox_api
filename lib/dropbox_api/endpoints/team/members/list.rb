@@ -31,7 +31,7 @@ module DropboxApi::Endpoints::Team
       ], options)
       options[:include_removed] ||= false
       options[:limit] = options[:limit] if options[:limit]
-      
+      # options[:team] = true
       perform_request options
     end
   end
