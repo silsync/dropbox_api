@@ -9,8 +9,10 @@ module DropboxApi::Endpoints::Users
     # Get information about a user's account.
     #
     # @return [BasicAccount] Basic information about any account.
-    add_endpoint :check_user do |options = {}|
-      perform_request
+    add_endpoint :check_user do |query, options = {}|
+      perform_request({
+        query: query
+      })
     end
   end
 end
