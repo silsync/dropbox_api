@@ -3,7 +3,7 @@ module DropboxApi::Endpoints::Sharing
   class GetSharedLinkFile < DropboxApi::Endpoints::Rpc
     Method      = :post
     Path        = '/2/sharing/get_shared_link_file'
-    ResultType  = DropboxApi::Metadata::SharedLinkFile
+    ResultType  = DropboxApi::Results::SharedLinkFile
     ErrorType   = DropboxApi::Errors::SharedLinkError
 
     include DropboxApi::OptionsValidator
