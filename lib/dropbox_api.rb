@@ -123,7 +123,7 @@ require 'dropbox_api/errors/create_file_request_error'
 require 'dropbox_api/errors/delete_error'
 require 'dropbox_api/errors/team_members_error'
 require 'dropbox_api/errors/team_folder_list_error'
-require 'dropbox_api/errors/check_user_app'
+require 'dropbox_api/errors/check_app_error'
 require 'dropbox_api/errors/check_user_error'
 
 require 'dropbox_api/result_builder'
