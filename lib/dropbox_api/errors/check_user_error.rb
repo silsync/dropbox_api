@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module DropboxApi::Errors
-  class DownloadError < CheckUserError
+  class CheckUserError < BasicError
     ErrorSubtypes = {      
     }.freeze
   end
