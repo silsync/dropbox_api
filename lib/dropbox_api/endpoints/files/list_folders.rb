@@ -26,7 +26,7 @@ module DropboxApi::Endpoints::Files
     #   results per request (Note:
     #   {https://www.dropbox.com/developers/documentation/http/documentation#files-list_folder Dropbox docs} indicate
     #   this is "approximate", and more may be returned)
-    add_endpoint :list_folder do |options = {}|
+    add_endpoint :list_folders do |options = {}|
       validate_options([
         :limit
       ], options)
