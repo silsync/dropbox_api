@@ -15,6 +15,7 @@ module DropboxApi::Endpoints::Files
     #   returned. The default for this field is 10.
     add_endpoint :list_revisions do |path, options = {}|
       validate_options([
+        :mode,
         :limit
       ], options)
       options[:limit] ||= 10
