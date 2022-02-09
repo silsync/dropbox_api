@@ -4,7 +4,8 @@ module DropboxApi::Results
     # A collection of files and directories.
     def entries
       @entries ||= @data['entries'].map do |entry|
-        DropboxApi::Metadata::Resource.new entry
+        entry
+        # DropboxApi::Metadata::Resource.new entry
       end
     end
 
