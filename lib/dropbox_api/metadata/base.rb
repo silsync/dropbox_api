@@ -58,7 +58,7 @@ module DropboxApi::Metadata
     private
 
     def []=(name, value)
-      instance_variable_set "@#{name}", self.class.fields[name].cast(value)
+      instance_variable_set "@#{name}", self.class.fields[name].cast(value)  unless value.nil?
     rescue ArgumentError
       raise ArgumentError, "Invalid value for `#{name}`: #{value.inspect}."
     end
