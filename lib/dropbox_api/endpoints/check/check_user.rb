@@ -9,7 +9,7 @@ module DropboxApi::Endpoints::Users
     # Get information about a user's account.
     #
     # @return [CheckUserResult] just returns the query if it was set
-    add_endpoint :check_user do |query, options = {}|
+    add_endpoint :check_user do |query="", options = {}|
       perform_request({
         query: query
       })
