@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module DropboxApi::Endpoints::Files
-  class ListFolderContinue < DropboxApi::Endpoints::Rpc
+  class ListFoldersContinue < DropboxApi::Endpoints::Rpc
     # NOTE: This hasn't been tested with real data, I couldn't make a query
     #       long enough to enable the `has_more` attribute in the
     #       `ListFolderResult`.
