@@ -1,4 +1,9 @@
 # frozen_string_literal: true
+if Gem::Requirement.new('>= 2.0').satisfied_by? Gem.loaded_specs['faraday'].version
+  require 'faraday/net_http_persistent'
+end
+
+
 module DropboxApi
   describe Client do
     it 'can have custom connection middleware' do
@@ -23,15 +28,14 @@ module DropboxApi
         faraday.use MiddlewareMiddle
       end
 
-      expect(connection.builder).to eq(Faraday::RackBuilder.new(
-        [
-          DropboxApi::MiddleWare::PathRoot,
-          MiddlewareStart,
-          MiddlewareMiddle,
-          MiddlewareEnd
-        ],
-        Faraday::Adapter::NetHttpPersistent
-      ))
+      expect(connection.builder.adapter).to eq(Faraday::Adapter::NetHttpPersistent)
+      expect(connection.builder.handlers).to eq([
+        DropboxApi::MiddleWare::PathRoot,
+        MiddlewareStart,
+        Faraday::Request::Authorization,
+        MiddlewareMiddle,
+        MiddlewareEnd
+      ])
     end
 
     describe "Refreshing access tokens" do

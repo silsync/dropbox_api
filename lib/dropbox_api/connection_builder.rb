@@ -50,10 +50,14 @@ module DropboxApi
           namespace_id: self.namespace_id
         }
         middleware.apply(connection) do
-          connection.authorization :Bearer, bearer
-          if @select_user
-            connection.headers['Dropbox-API-Select-User'] = @select_user
-          end
+# <<<<<<< OLD HEAD - see if we can drop this
+#           connection.authorization :Bearer, bearer
+#           if @select_user
+#             connection.headers['Dropbox-API-Select-User'] = @select_user
+#           end
+# =======
+          connection.request :authorization, :Bearer, bearer
+# >>>>>>> 11bd1cf5f9a3683f1956857f9187b68134a7eddd
           yield connection
         end
       end
